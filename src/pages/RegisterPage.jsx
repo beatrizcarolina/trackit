@@ -14,7 +14,7 @@ export default function RegisterPage() {
                 <RegisterForm />
             </RegisterContainer>
 
-            <Link to={'/'}>
+            <Link to={'/'} data-test="login-link">
                 <p>Já tem uma conta? Faça login!</p>
             </Link>
 

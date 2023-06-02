@@ -45,7 +45,8 @@ export default function LoginForm() {
                     required 
                     onChange={(event) => setEmail(event.target.value)}
                     value={email}   
-                    disabled={disabled}                     
+                    disabled={disabled} 
+                    data-test="email-input"                    
                 />
 
                 <input 
@@ -55,9 +56,10 @@ export default function LoginForm() {
                     onChange={(event) => setSenha(event.target.value)}
                     value={senha}  
                     disabled={disabled} 
+                    data-test="password-input"
                 />
 
-               <button disabled={disabled} type="submit">
+               <button disabled={disabled} type="submit" data-test="login-btn">
                     { disabled &&
                         <ThreeDots height="13px" color="#ffffff"></ThreeDots>
                     }

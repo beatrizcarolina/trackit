@@ -7,10 +7,10 @@ export default function NavBar() {
     const { token, login, logout } = React.useContext(AuthContext);
 
     return(
-        <HeaderContainer>
+        <HeaderContainer data-test="header">
             <h1>TrackIt</h1>
             {token &&
-                <img src={token.image}/>}        
+                <img src={token.image}/> data-test="avatar"}        
         </HeaderContainer>
     )
 }

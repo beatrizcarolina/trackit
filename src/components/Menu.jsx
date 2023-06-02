@@ -8,13 +8,13 @@ import 'react-circular-progressbar/dist/styles.css';
 export default function Menu() {
     
     return(
-        <MenuContainer>
+        <MenuContainer data-test="menu">
             <Footer>
-                <Link to="/habitos">
+                <Link to="/habitos" data-test="habit-link" >
                     Hábitos
                 </Link>
 
-                <Link to="/hoje">
+                <Link to="/hoje" data-test="today-link">
                     <Container>
                         <CircularProgressbar
                                     value={15} 
@@ -33,7 +33,7 @@ export default function Menu() {
 
                 </Link>
 
-                <Link to="/historico">
+                <Link to="/historico" data-test="history-link">
                     Histórico
                 </Link>
             </Footer>

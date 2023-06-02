@@ -49,7 +49,8 @@ export default function RegisterForm() {
                     required 
                     onChange={(event) => setEmail(event.target.value)}
                     value={email} 
-                    disabled={disabled}                      
+                    disabled={disabled}  
+                    data-test="email-input"                    
                 />
 
                 <input 
@@ -59,6 +60,7 @@ export default function RegisterForm() {
                     onChange={(event) => setPassword(event.target.value)}
                     value={password}  
                     disabled={disabled}
+                    data-test="password-input"
                 />
 
                 <input 
@@ -67,7 +69,8 @@ export default function RegisterForm() {
                     required 
                     onChange={(event) => setName(event.target.value)}
                     value={name}  
-                    disabled={disabled}                     
+                    disabled={disabled}   
+                    data-test="user-name-input"                  
                 />
 
                 <input 
@@ -76,10 +79,11 @@ export default function RegisterForm() {
                     required 
                     onChange={(event) => setPicture(event.target.value)}
                     value={picture}  
-                    disabled={disabled}                     
+                    disabled={disabled}    
+                    data-test="user-image-input"                 
                 />
 
-               <button disabled={disabled} type="submit">
+               <button disabled={disabled} type="submit" data-test="signup-btn">
                     { disabled &&
                         <ThreeDots height="13px" color="#ffffff"></ThreeDots>
                     }

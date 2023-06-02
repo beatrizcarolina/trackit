@@ -14,7 +14,7 @@ export default function LoginPage() {
                 <LoginForm />
             </LoginContainer>
 
-            <Link to={'/cadastro'}>
+            <Link to={'/cadastro'} data-test="signup-link">
                 <p>Não tem uma conta? Cadastre-se!</p>
             </Link>
 
