@@ -10,7 +10,7 @@ export default function NavBar() {
         <HeaderContainer data-test="header">
             <h1>TrackIt</h1>
             {token &&
-                <img src={token.image}/> data-test="avatar"}        
+                <img src={token.image} data-test="avatar"/> }        
         </HeaderContainer>
     )
 }
