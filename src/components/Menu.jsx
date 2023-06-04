@@ -59,6 +59,8 @@ const Footer = styled.div`
     justify-content: space-between;
     align-items: center;
     position: relative;
+    margin-left: 36px;
+    margin-right: 31px;
 
     a{
         font-size: 18px;
