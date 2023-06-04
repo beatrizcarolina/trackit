@@ -24,22 +24,21 @@ const HeaderContainer = styled.div`
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-itens: center;
     position: fixed;
     z-index: 1;
 
 
     h1{
-        margin-left: 18px;
         margin-top: 10px;
+        margin-left: 18px;
         font-family: 'Playball';
         font-style: normal;
         font-weight: 400;
         font-size: 39px;
         line-height: 49px;
-        color: #FFFFFF;
-        
+        color: #FFFFFF;  
     }
 
     img{
@@ -47,6 +46,7 @@ const HeaderContainer = styled.div`
         height: 51px;
         margin-rigth: 10px;
         margin-top: 9px;
+        margin-right: 18px;
         border-radius: 98.5px;
     }
 `
