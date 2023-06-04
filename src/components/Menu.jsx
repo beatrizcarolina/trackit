@@ -41,9 +41,7 @@ export default function Menu() {
     )  
 }
 
-const MenuContainer = styled.div`
-
-    
+const MenuContainer = styled.div` 
     width: 100%;
     height: 70px;
     bottom: 0px;
@@ -53,7 +51,6 @@ const MenuContainer = styled.div`
     justify-content: center;
     position: fixed;
     z-index: 1;
-
 `
 const Footer = styled.div`
     width: 375px;
