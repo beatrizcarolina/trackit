@@ -28,8 +28,6 @@ const HistoricContainer = styled.div`
 `
 
 const Main = styled.div`
-   
-
     h3{
         heigth: 29px;
         margin-left: 17px;
