@@ -3,9 +3,11 @@ import styled from "styled-components";
 import React from "react";
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import { AuthContext } from "../components/AuthContext";
 
 
 export default function Menu() {
+    const { token, login, logout } = React.useContext(AuthContext);
     
     return(
         <MenuContainer data-test="menu">
@@ -17,8 +19,8 @@ export default function Menu() {
                 <Link to="/hoje" data-test="today-link">
                     <Container>
                         <CircularProgressbar
-                                    value={15} 
-                                    maxValue={20}
+                                    value={token.progress}
+                                    maxValue={100}
                                     text={"Hoje"}
                                     background
                                     backgroundPadding={6}
