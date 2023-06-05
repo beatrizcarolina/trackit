@@ -5,11 +5,9 @@ import { AuthContext } from "../components/AuthContext";
 import { ThreeDots } from "react-loader-spinner";
 import DayButton from "./DayButton";
 
-export default function NewHabit({cancelHabit, updateHabits}) {
+export default function NewHabit({cancelHabit, updateHabits, habitName, setHabitName, days, setDays}) {
     const { token, login, logout } = React.useContext(AuthContext);
     const [ disabled, setDisabled ] = React.useState(false);
-    const [ habitName, setHabitName ] = React.useState("");
-    const [ days, setDays ] = React.useState([]);
     const weekDays = ["D", "S", "T", "Q", "Q", "S", "S"];
 
     function saveHabits() {
@@ -19,6 +17,8 @@ export default function NewHabit({cancelHabit, updateHabits}) {
                 name: habitName,
                 days: days
             };
+
+            console.log(data);
 
             if(token) {
                 axios
@@ -71,7 +71,7 @@ export default function NewHabit({cancelHabit, updateHabits}) {
                             disabled={disabled}
                             handleClick={saveDay}
                             day={index+1}
-                            select={false}
+                            select={days.includes(index)}
                         ></DayButton>
                     ))
                 }
@@ -94,7 +94,8 @@ export default function NewHabit({cancelHabit, updateHabits}) {
 const HabitContainer = styled.div`
     height: 180px;
     margin-left: 17px;
-    margin-top: 20px;
+    margin-right: 17px;
+    margin-top: 10px;
     margin-bottom: 29px;
     background-color: #FFFFFF;
     border-radius: 5px;
