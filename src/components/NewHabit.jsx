@@ -33,6 +33,9 @@ export default function NewHabit({cancelHabit, updateHabits, habitName, setHabit
                 alert("Faça login novamente!");
             }
            
+        } else {
+            alert("Insira um nome para o hábito!");
+            setDisabled(false);
         }
     }
 
