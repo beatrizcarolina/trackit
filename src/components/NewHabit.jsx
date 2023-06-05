@@ -17,9 +17,7 @@ export default function NewHabit({cancelHabit, updateHabits, habitName, setHabit
                 name: habitName,
                 days: days
             };
-
-            console.log(data);
-
+            
             if(token) {
                 axios
                 .post("https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/habits", 
@@ -70,7 +68,7 @@ export default function NewHabit({cancelHabit, updateHabits, habitName, setHabit
                             text={day}                  
                             disabled={disabled}
                             handleClick={saveDay}
-                            day={index+1}
+                            day={index}
                             select={days.includes(index)}
                         ></DayButton>
                     ))

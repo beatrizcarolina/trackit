@@ -31,7 +31,7 @@ export default function Habit({habit, updateHabits}) {
              <HabitContainer>
              {
                 weekDays.map((day, index) => {
-                    if(habit.days.indexOf(index+1) !== -1) {
+                    if(habit.days.indexOf(index) !== -1) {
                         return <DayButton key={index} 
                                           text={day}  
                                           disabled={true} 

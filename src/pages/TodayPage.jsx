@@ -19,7 +19,7 @@ export default function TodayPage() {
           }
       })
       const newProgress = Math.round(total/todayHabits.length*100);
-      login({...token, progress: newProgress});     
+      login({...token, progress: newProgress});
   }
 
     React.useEffect(() => {
@@ -35,7 +35,7 @@ export default function TodayPage() {
             },
           })
 
-        .then(response => {setDayHabits(response.data); setProgress(response.data)})
+        .then(response => {setDayHabits(response.data); updateProgress(response.data)})
 
         .catch((error) => console.log(error));
       }   
